@@ -39,6 +39,6 @@ class GeneratorPath
 
     private function convertPathToNamespace($path)
     {
-        return str_replace('/', '\\', $path);
+        return str_replace('/', '\\', str_replace('src/', '', $path));
     }
 }

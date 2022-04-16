@@ -93,7 +93,7 @@ abstract class GeneratorCommand extends Command
 
         $namespace .= '\\' . $module->getStudlyNameWithSuffix();
 
-        $namespace .= '\\' . $this->getDefaultNamespace();
+        $namespace .= '\\' . str_replace('src/', '', $this->getDefaultNamespace());
 
         $namespace .= '\\' . $extra;
 
